@@ -1,0 +1,195 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#0B1220">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HC-05 CAR"
+            android:textColor="#F8FAFC"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth • Manual • Obstacle Mode"
+            android:textColor="#94A3B8"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="14dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/panel"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="●  DISCONNECTED"
+                android:textColor="#FCA5A5"
+                android:textStyle="bold"
+                android:background="@drawable/status_off"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"/>
+
+            <Spinner
+                android:id="@+id/deviceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="#E2E8F0"/>
+
+            <Button
+                android:id="@+id/connectBtn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:text="CONNECT"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp">
+
+            <Button
+                android:id="@+id/manualBtn"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:text="MANUAL"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_control"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="1dp"/>
+
+            <Button
+                android:id="@+id/obstacleBtn"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:text="OBSTACLE"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_control"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/modeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mode: MANUAL"
+            android:textColor="#CBD5E1"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/panel"
+            android:padding="18dp">
+
+            <Button
+                android:id="@+id/forwardBtn"
+                android:layout_width="130dp"
+                android:layout_height="86dp"
+                android:text="▲"
+                android:textSize="34sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_control"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/leftBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="86dp"
+                    android:text="◀"
+                    android:textSize="30sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_control"/>
+
+                <Button
+                    android:id="@+id/stopBtn"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:text="STOP"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_stop"/>
+
+                <Button
+                    android:id="@+id/rightBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="86dp"
+                    android:text="▶"
+                    android:textSize="30sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_control"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="130dp"
+                android:layout_height="86dp"
+                android:text="▼"
+                android:textSize="34sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_control"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hold a direction • release = STOP"
+                android:textColor="#64748B"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="14dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lastCommand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last command: —"
+            android:textColor="#94A3B8"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+</ScrollView>
